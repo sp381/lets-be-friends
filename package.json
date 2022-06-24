@@ -1,0 +1,28 @@
+{
+  "name": "lets-be-friends",
+  "version": "1.0.0",
+  "description": "AS A social media startup\r <br />\r I WANT an API for my social network that uses a NoSQL database\r <br />\r SO THAT my website can handle large amounts of unstructured data\r <br />",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js", 
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sp381/lets-be-friends.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sp381/lets-be-friends/issues"
+  },
+  "homepage": "https://github.com/sp381/lets-be-friends#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
