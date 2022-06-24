@@ -81,8 +81,37 @@ const thoughtController = {
                 );
             })
             .then(dbThoughtData => res.json(dbThoughtData))
-            .catch(err => res.json(err));
-    }    
+            .then((dbThoughtData) => res.json(dbThoughtData))
+            .catch((err) => res.json(err))
+    },  
+
+    // add a reaction
+    createReaction({ params, body })  {
+    Thought.findOneAndUpdate(
+        { _id: params.thoughtId },
+        { $addToSet: { reactions: body } },
+        { new: true }
+    )
+    .then(dbThoughtData => {
+        if(!dbThoughtData) {
+            res.status(404).json({ message: "No thoughts found with this Id!"});
+            return;
+        }
+        res.json(dbThoughtData);
+    })
+    .catch(err => res.status(400).json(err));
+    },
+
+    //delete a reaction
+    removeReaction({ params }, res) {
+        Thought.findOneAndUpdate(
+            { _id: params.thoughtId },
+            { $pul: { reactions: { reactionId: params.reactionId } } },
+            { new: true }
+        )
+        .then((dbThoughtData) => res.json(dbThoughtData))
+        .catch((err) => res.json(err));
+    }
 };
 
 module.exports = thoughtController; 
