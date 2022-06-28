@@ -18,9 +18,13 @@ SO THAT my website can handle large amounts of unstructured data
 <br />
 
 # Screenshot
-
+![Alt text](/assets/insomnia.png?raw=true "Insomnia") 
+![Alt text](/assets/vs-code.png? "VS Code")
 
 # Demo
+Screencastify Link: https://youtu.be/TKXtyj34nEw 
+GitHub URL: https://github.com/sp381/lets-be-friends 
+<br />
 
 # Contribution 
 Made by Sarah P

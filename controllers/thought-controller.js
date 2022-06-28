@@ -74,14 +74,13 @@ const thoughtController = {
                 if (!deletedThought) {
                     return res.status(404).json({ message: "No thoughts found with this Id!" });
                 }
-                return User.findOneAndUpdate(
-                    { _id: params.userId },
-                    { $pull: { thoughts: params.thoughtId } },
-                    { new: true }
-                );
+                res.json(deletedThought)
+                // return User.findOneAndUpdate(
+                //     { _id: params.userId },
+                //     { $pull: { thoughts: params.thoughtId } },
+                //     { new: true }
+                // );
             })
-            .then(dbThoughtData => res.json(dbThoughtData))
-            .then((dbThoughtData) => res.json(dbThoughtData))
             .catch((err) => res.json(err))
     },  
 
