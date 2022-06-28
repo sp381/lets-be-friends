@@ -23,6 +23,7 @@ SO THAT my website can handle large amounts of unstructured data
 
 # Demo
 Screencastify Link: https://youtu.be/TKXtyj34nEw 
+<br />
 GitHub URL: https://github.com/sp381/lets-be-friends 
 <br />
 
